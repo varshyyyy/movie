@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131720;
+    font-family: 'sans-serif';
+    color: white; /* Default text color for the body */
+}
+
+h3 {
+    color: white;
+    margin-top: 0.5em; /* Add some spacing above the movie titles */
+    margin-bottom: 0; /* Remove default bottom margin */
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #131720;
+    padding: 10px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+form {
+    background-color: #151f31;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+input {
+    all: unset;
+    font: 15px system-ui;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+}
+
+/* Styles for the movie grid */
+#section {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start (left) */
+}
+
+.column {
+    width: 25%; /* Four movies per row (adjust as needed) */
+    padding: 10px;
+}
+
+.card {
+    border-radius: 19px;
+    padding: 15px;
+    text-align: center;
+    background-color: #151f30;
+    transition: transform 0.2s; /* Add a smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.thumbnail {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 19px;
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    aspect-ratio: 2/3; /* Adjust the aspect ratio for a better fit */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .column {
+        width: 50%; /* Two movies per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .column {
+        width: 100%; /* One movie per row on small screens */
+    }
+}
